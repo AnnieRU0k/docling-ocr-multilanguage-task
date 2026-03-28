@@ -20,6 +20,9 @@ I started the project on Fedora with the goal of using IBM Granite via Docling. 
 
 **HARDWARE BARRIERS**: Despite 46GB of disk space, a 1.5GB user quota triggered a OS Error as Disk quota exceeded during VLM downloads.
 
+![Disk Quota Error](./images/size%20issues%20on%20fedora.JPG)
+
+![Space Verification](./images/checking%20space%20again.JPG)
 
 **WORK AROUND**: I bypassed full model specs by downloading only essential resources mentioned in error messages, using community repositories and Gemini AI to verify code viability under these strict constraints.
 OUTPUT: Even after bypassing the hardware wall, I observed Model Bias. By injecting a Dutch priority code when loading pdf (nl/nld), English words were misspelled into Dutch phonetics (e.g., "Process" to "Proces") and French accents were dropped. This showed that Code Injection methods often force the AI to erase minority languages on a page to match the prioritized dialect.
