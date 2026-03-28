@@ -24,7 +24,7 @@ I started the project on Fedora with the goal of using IBM Granite via Docling. 
 **WORK AROUND**: I bypassed full model specs by downloading only essential resources mentioned in error messages, using community repositories and Gemini AI to verify code viability under these strict constraints.
 OUTPUT: Even after bypassing the hardware wall, I observed Model Bias. By injecting a Dutch priority code when loading pdf (nl/nld), English words were misspelled into Dutch phonetics (e.g., "Process" to "Proces") and French accents were dropped. This showed that Code Injection methods often force the AI to erase minority languages on a page to match the prioritized dialect.
 
-![NLD Not Supported](./images/3.%20nld%20not%20supported.JPG)
+
 
 
 ## **DOCLING WINDOWS OS INSTALL**
@@ -32,7 +32,7 @@ OUTPUT: Even after bypassing the hardware wall, I observed Model Bias. By inject
 To resolve storage limitations, I migrated to Windows 10, establishing a baseline using Docling’s built-in RapidOCR and there after installing EasyOCR. The code was straight forward and easy to load the pdf However I discovered that despite being able to load pdf through use of "nld" language code in rapid crs baseline I needed to edit this to “nl” for easyocr. This shows a difference in language tagging between engines for the same language.
 
 
-![RapidOCR Version](./images/4.%20rapiocr%20version.JPG)
+![NLD Not Supported](./images/3.%20nld%20not%20supported.JPG)
 
 
 **OUTPUT**: Despite the stable environment, the Priority Bias persisted. Technical English terms are still being interpreted through a Dutch phonetic lens. This confirmed that the issue was not the OS, but the Linguistic Mesh. The way the OCR engine prioritizes a single language code. This is also evident with multi language codes. The more codes you inject, the lazier the model gets. It starts guessing and because the models are often smaller (to fit memory), they default to the priority or heaviest language in the list.
