@@ -53,7 +53,9 @@ RapidOCR’s ONNX-based architecture handled the layout better.
 While the Tesseract feature language pack provided the necessary linguistic grounding without the bias seen in previous attempts.
 
 FINAL PROJECT OUTCOME
+
 •	output/: The final high-fidelity .md files produced by the RapidOCR/Tesseract pivot
+
 •	scripts/: Reconstructs the logic for each stage of this journey.
 
 A key discovery in this project was the difference between Code Injection (EasyOCR/RapidOCR) and System-Level Integration (Tesseract).
