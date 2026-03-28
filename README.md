@@ -1,3 +1,7 @@
+WHAT IS DOCLING?
+
+Docling is an open-source Python and TypeScript library that simplifies document processing, parsing diverse formats and providing seamless integrations with the gen AI ecosystem.
+
 DOCLING OCR: MULTILINGUAL ENGINE RESEARCH AND OPTIMIZATION
 
 This repository documents the journey through a document processing pipeline, transitioning from a restricted Fedora Linux environment to a high-fidelity Windows-based production workflow.
