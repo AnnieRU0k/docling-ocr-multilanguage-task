@@ -32,7 +32,7 @@ OUTPUT: Even after bypassing the hardware wall, I observed Model Bias. By inject
 
 ## **DOCLING WINDOWS OS INSTALL**
 
-To resolve storage limitations, I migrated to Windows 10, establishing a baseline using Docling’s built-in RapidOCR and there after installing EasyOCR. The code was straight forward and easy to load the pdf However I discovered that despite being able to load pdf through use of "nld" language code in rapid crs baseline I needed to edit this to “nl” for easyocr. This shows a difference in language tagging between engines for the same language.
+To resolve storage limitations, I migrated to Windows 10, establishing a baseline using Docling’s built-in RapidOCR and there after installing EasyOCR. The code was straight forward and easy to load the pdf However I discovered that despite being able to load pdf through use of "nld" language code in rapid ocr baseline I needed to edit this to “nl” for easyocr. This shows a difference in language tagging between engines for the same language.
 
 
 ![NLD Not Supported](./images/3.%20nld%20not%20supported.JPG)
