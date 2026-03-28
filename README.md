@@ -12,6 +12,11 @@ This repository documents the journey through a document processing pipeline, tr
 
 I started the project on Fedora with the goal of using IBM Granite via Docling. I started by installing docling and later installing granite model as an add on.
 
+![Docling Version](./images/1.docling%20version.JPG)
+
+
+![Tesseract Version](./images/7.%20Tesseract%20version.JPG)
+
 
 **HARDWARE BARRIERS**: Despite 46GB of disk space, a 1.5GB user quota triggered a OS Error as Disk quota exceeded during VLM downloads.
 
@@ -19,10 +24,15 @@ I started the project on Fedora with the goal of using IBM Granite via Docling. 
 **WORK AROUND**: I bypassed full model specs by downloading only essential resources mentioned in error messages, using community repositories and Gemini AI to verify code viability under these strict constraints.
 OUTPUT: Even after bypassing the hardware wall, I observed Model Bias. By injecting a Dutch priority code when loading pdf (nl/nld), English words were misspelled into Dutch phonetics (e.g., "Process" to "Proces") and French accents were dropped. This showed that Code Injection methods often force the AI to erase minority languages on a page to match the prioritized dialect.
 
+![NLD Not Supported](./images/3.%20nld%20not%20supported.JPG)
+
 
 ## **DOCLING WINDOWS OS INSTALL**
 
 To resolve storage limitations, I migrated to Windows 10, establishing a baseline using Docling’s built-in RapidOCR and there after installing EasyOCR. The code was straight forward and easy to load the pdf However I discovered that despite being able to load pdf through use of "nld" language code in rapid crs baseline I needed to edit this to “nl” for easyocr. This shows a difference in language tagging between engines for the same language.
+
+
+![RapidOCR Version](./images/4.%20rapiocr%20version.JPG)
 
 
 **OUTPUT**: Despite the stable environment, the Priority Bias persisted. Technical English terms are still being interpreted through a Dutch phonetic lens. This confirmed that the issue was not the OS, but the Linguistic Mesh. The way the OCR engine prioritizes a single language code. This is also evident with multi language codes. The more codes you inject, the lazier the model gets. It starts guessing and because the models are often smaller (to fit memory), they default to the priority or heaviest language in the list.
@@ -31,6 +41,8 @@ To resolve storage limitations, I migrated to Windows 10, establishing a baselin
 ## **TESSERACT ON WINDOWS OS**
 
 Finally I installed tesseract OCR on window. The difference with the other OCRs was that during the install process there were language components options that you could select for multiple languages.
+
+![Tesseract Languages](./images/2.%20selecting%20language%20with%20tesseract.JPG)
 
 
 **ENVIRONMENT BARRIERS**: However I need to pivot to RapidOCR (tesseract alternatives) as the primary engine, supported by a system-level Tesseract backend. The pivot away from Tesseract was a matter of environment compatibility. While the system-level Dutch language packs for dutch French and english were ready and chosen upon install, Python 3.13 proved to be too modern for the older version Tesseract bindings. Tesseract’s Python wrappers often rely on legacy C-extensions that have not yet been fully optimized for the internal changes in Python 3.13. This caused the initialization to hang and crash, preventing any document from loading despite the correct configurations being in place.
