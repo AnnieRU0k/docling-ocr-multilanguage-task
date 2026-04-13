@@ -60,7 +60,7 @@ Finally I installed tesseract OCR on window. The difference with the other OCRs 
 **OUTPUT**: This forced pivot proved that RapidOCR ONNX is the more resilient choice for modern development environments. It bypassed the loading errors that crashed Tesseract and delivered the final, clean Markdown files. The final files upheld each language's integrity without bias. Each language had proper spelling and accent retention RapidOCR’s ONNX-based architecture handled the layout better. While the Tesseract feature language pack provided the necessary linguistic grounding without the bias seen in previous attempts.
 
 **RAPID AND EASY OCR**
-EasyOCR is built on PyTorch and is known for its high accuracy and support for over 80 languages. It was easy to code and the script was straight forward. Its only downfall was it did'nt have some languages and wouldnt recognize language codes like hebrew or greek. It is also a bit slow. 
+EasyOCR is built on PyTorch and is known for its high accuracy and support of over 80 languages. It was easy to code and the script was straight forward. Its only downfall was it did'nt have some languages and wouldnt recognize language codes like hebrew or greek. It is also a bit slow. 
 RapidOCR as stated before is built upon onnyxruntime and this makes it easier and faster to use than the other OCR options. Especially on laptop or machines that don't have a dedicated GPU. 
 Also often has fewer issues with newer Python versions like 3.13 because it doesn't rely on the heavy PyTorch ecosystem.
 
