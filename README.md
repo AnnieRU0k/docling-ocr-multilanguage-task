@@ -59,6 +59,10 @@ Finally I installed tesseract OCR on window. The difference with the other OCRs 
 
 **OUTPUT**: This forced pivot proved that RapidOCR ONNX is the more resilient choice for modern development environments. It bypassed the loading errors that crashed Tesseract and delivered the final, clean Markdown files. The final files upheld each language's integrity without bias. Each language had proper spelling and accent retention RapidOCR’s ONNX-based architecture handled the layout better. While the Tesseract feature language pack provided the necessary linguistic grounding without the bias seen in previous attempts.
 
+**RAPID AND EASY OCR**
+EasyOCR is built on PyTorch and is known for its high accuracy and support for over 80 languages. It was easy to code and the script was straight forward. Its only downfall was it did'nt have some languages and wouldnt recognize language codes like hebrew or greek. It is also a bit slow. 
+RapidOCR as stated before is built upon onnyxruntime and this makes it easier and faster to use than the other OCR options. Especially on laptop or machines that don't have a dedicated GPU. 
+Also often has fewer issues with newer Python versions like 3.13 because it doesn't rely on the heavy PyTorch ecosystem.
 
 ## **FINAL PROJECT OUTCOME**
 
@@ -68,6 +72,6 @@ Finally I installed tesseract OCR on window. The difference with the other OCRs 
 
 A key discovery in this project was the difference between Code Injection (EasyOCR/RapidOCR) and System-Level Integration (Tesseract).
 
-The Bias in Code Injection: In EasyOCR and RapidOCR, we had to specify the language code (nl or nld) within the Python script. This created a priority bias where the engine attempted to map English and French characters to Dutch phonetics.
+The Bias in Code Injection: In EasyOCR and RapidOCR, we had to specify the language code used in pdf page 04 which was in dutch, french and english (nl or nld) within the Python script. This created a priority bias where the engine attempted to map English and French characters to Dutch phonetics.
 
 **Tesseract's Advantage**: Unlike the other engines, Tesseract allowed for the selection of multiple language packs during the installation phase. By installing "nld", "fra", and "eng" simultaneously at the system level, the engine gained a native ability to retain the integrity of all three languages without needing a code to be injected during the markdown process. This effectively eliminated the "Linguistic Erasure" observed in earlier stages. This upheld each language's integrity during markdown.
